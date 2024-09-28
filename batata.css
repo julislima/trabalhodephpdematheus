@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000018; /* Fundo lilás */
+}
+
+.navbar {
+    background-color: #00000e; /* Roxo escuro */
+    padding: 15px;
+    text-align: center;
+}
+
+.navbar nav ul {
+    list-style-type: none; /* Remove marcadores da lista */
+    padding: 0; /* Remove padding padrão */
+    margin: 0; /* Remove margin padrão */
+}
+
+.navbar nav ul li {
+    display: inline; /* Exibe os itens em linha */
+    margin: 0 15px; /* Espaçamento entre os itens */
+}
+
+.navbar a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px 15px; /* Ajuste o padding conforme necessário */
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    background-color: #f0f0f3; /* Roxo mais escuro ao passar o mouse */
+    border-radius: 5px; /* Bordas arredondadas ao passar o mouse */
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.container h2 {
+    color: #250606;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1caca;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: #a9a9b1;
+    outline: none;
+}
+
+.input-group textarea {
+    resize: vertical;
+    height: 100px; /* Altura padrão para a biografia */
+}
+
+.continue-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.continue-button input[type="submit"] {
+    background: #080636; /* Roxo */
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+    width: 100%;
+}
+
+.continue-button input[type="submit"]:hover {
+    background: #0e0a5a; /* Roxo mais escuro ao passar o mouse */
+}
+
+/* Estilo para o botão de deletar */
+button[type="submit"] {
+    background-color: #ff4d4d; /* Cor de fundo vermelha */
+    color: rgb(192, 92, 92); /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    padding: 10px 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    text-decoration: none; /* Remove o sublinhado */
+    display: inline-block; /* Permite definir altura e largura */
+    font-size: 16px; /* Tamanho da fonte */
+    margin: 10px 2px; /* Margem ao redor do botão */
+    cursor: pointer; /* Cursor em forma de mão ao passar o mouse */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+/* Efeito ao passar o mouse */
+button[type="submit"]:hover {
+    background-color: #0c0000; /* Cor de fundo ao passar o mouse */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    .container h2 {
+        font-size: 1.8rem;
+    }
+
+    .navbar nav ul {
+        display: block; /* Altera a exibição para bloco */
+        text-align: center; /* Centraliza os links */
+    }
+
+    .navbar nav ul li {
+        display: block; /* Cada link em uma nova linha */
+        margin: 10px 0; /* Margem vertical entre os links */
+    }
+}
